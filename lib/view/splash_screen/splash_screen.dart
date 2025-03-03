@@ -26,12 +26,11 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Image.asset(
-        "assets/image/logo.png",
-        height: MediaQuery.sizeOf(context).height,
-        width: MediaQuery.sizeOf(context).width,
-        fit: BoxFit.cover,
+    return Scaffold(
+      body: Center(
+        child: CircleAvatar(
+          radius: 105,
+            backgroundImage: AssetImage("assets/image/logo.png")),
       ),
     );
   }
