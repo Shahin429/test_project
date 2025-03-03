@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../res/components/app_string.dart';
+import '../../res/components/modify_text.dart';
 
 class AirPlane extends StatefulWidget {
   const AirPlane({super.key});
@@ -60,7 +61,9 @@ class _AirPlaneState extends State<AirPlane> {
                     borderRadius: BorderRadius.circular(20),
                     color: Colors.grey,
                   ),
-                  child: Center(child: CircularProgressIndicator(color: Colors.white,)),
+                  child: Center(
+                    child: CircularProgressIndicator(color: Colors.white),
+                  ),
                 )
                 : Container(
                   height: 200,
@@ -75,19 +78,18 @@ class _AirPlaneState extends State<AirPlane> {
                     ),
                   ),
                 ),
-            Text(
-              "Airplane",
-              style: TextStyle(
-                fontSize: 20,
-                color: Colors.black,
-                fontWeight: FontWeight.bold,
-              ),
+            ModifyText(
+              text: "Airplane",
+              color: Colors.black,
+              fontWeight: FontWeight.bold,
+              fontSize: 20,
             ),
             Divider(color: Colors.grey, thickness: 1),
             Expanded(
               child: SingleChildScrollView(
                 scrollDirection: Axis.vertical,
                 child: Text(
+                  textAlign: TextAlign.start,
                   AppString.airPlaneDescription,
                   style: TextStyle(
                     fontWeight: FontWeight.w400,

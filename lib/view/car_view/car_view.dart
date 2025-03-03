@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../res/components/app_string.dart';
+import '../../res/components/modify_text.dart';
 
 class CarView extends StatefulWidget {
   const CarView({super.key});
@@ -79,22 +80,18 @@ class _CarViewState extends State<CarView> {
                       ),
                     ),
                   ),
-              Text(
-                "Car",
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ),
+              ModifyText(
+                text: "Car",
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
               ),
               Divider(color: Colors.grey, thickness: 1),
-              Text(
-                AppString.carDescription,
-                style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 16,
-                  color: Colors.black,
-                ),
+              ModifyText(
+                text: AppString.carDescription,
+                color: Colors.black,
+                fontWeight: FontWeight.w400,
+                fontSize: 16,
               ),
             ],
           ),

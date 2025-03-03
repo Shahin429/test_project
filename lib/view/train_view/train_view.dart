@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../res/components/app_string.dart';
+import '../../res/components/modify_text.dart';
 
 class TrainView extends StatefulWidget {
   const TrainView({super.key});
@@ -73,27 +74,24 @@ class _TrainViewState extends State<TrainView> {
                       borderRadius: BorderRadius.circular(20),
                       image: DecorationImage(
                         image: NetworkImage(
-                          "https://images.unsplash.com/photo-1535535112387-56ffe8db21ff?q=80&w=2674&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                        ),fit: BoxFit.cover
+                          "https://images.unsplash.com/photo-1535535112387-56ffe8db21ff?q=80&w=2674&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                        ),
+                        fit: BoxFit.cover,
                       ),
                     ),
                   ),
-              Text(
-                "Train",
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ),
+              ModifyText(
+                text: "Train",
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
               ),
               Divider(color: Colors.grey, thickness: 1),
-              Text(
-                AppString.trainDescription,
-                style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 16,
-                  color: Colors.black,
-                ),
+              ModifyText(
+                text: AppString.trainDescription,
+                color: Colors.black,
+                fontWeight: FontWeight.w400,
+                fontSize: 16,
               ),
             ],
           ),

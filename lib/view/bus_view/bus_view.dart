@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../res/components/app_string.dart';
+import '../../res/components/modify_text.dart';
 
 class BusView extends StatefulWidget {
   const BusView({super.key});
@@ -72,26 +73,25 @@ class _BusViewState extends State<BusView> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       image: DecorationImage(
-                        image: NetworkImage("https://cdn.pixabay.com/photo/2018/03/07/16/07/coach-3206326_1280.png"),fit: BoxFit.cover
+                        image: NetworkImage(
+                          "https://cdn.pixabay.com/photo/2018/03/07/16/07/coach-3206326_1280.png",
+                        ),
+                        fit: BoxFit.cover,
                       ),
                     ),
                   ),
-              Text(
-                "Bus",
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                ),
+              ModifyText(
+                text: "Bus",
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
               ),
               Divider(color: Colors.grey, thickness: 1),
-              Text(
-                AppString.busDescription,
-                style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 16,
-                  color: Colors.black,
-                ),
+              ModifyText(
+                text: AppString.busDescription,
+                color: Colors.black,
+                fontWeight: FontWeight.w400,
+                fontSize: 16,
               ),
             ],
           ),
