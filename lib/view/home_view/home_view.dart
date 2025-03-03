@@ -11,6 +11,7 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.sizeOf(context);
     return Scaffold(
       body: Column(
         spacing: 60,
@@ -59,8 +60,8 @@ class HomeView extends StatelessWidget {
                       icon: Icons.flight,
                       text: "Airplane",
                       color: Colors.blue,
-                      height: 180,
-                      width: 165,
+                      height: size.height*0.2,
+                      width: size.width*0.41,
                       onTap: () {
                         Navigator.push(
                           context,
@@ -72,8 +73,8 @@ class HomeView extends StatelessWidget {
                       icon: Icons.train_outlined,
                       text: "Train",
                       color: Colors.blueAccent.shade700,
-                      height: 180,
-                      width: 165,
+                      height: size.height*0.2,
+                      width: size.width*0.41,
                       onTap: () {
                         Navigator.push(
                           context,
@@ -90,8 +91,8 @@ class HomeView extends StatelessWidget {
                       icon: Icons.directions_bus_outlined,
                       text: "Bus",
                       color: Colors.orange,
-                      height: 180,
-                      width: 165,
+                      height: size.height*0.2,
+                      width: size.width*0.41,
                       onTap: () {
                         Navigator.push(
                           context,
@@ -103,8 +104,8 @@ class HomeView extends StatelessWidget {
                       icon: Icons.directions_car_outlined,
                       text: "Car",
                       color: Colors.greenAccent.shade700,
-                      height: 180,
-                      width: 165,
+                      height: size.height*0.2,
+                      width: size.width*0.41,
                       onTap: () {
                         Navigator.push(
                           context,
