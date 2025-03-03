@@ -14,6 +14,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
+    print(" Here I'm A time : $Timer");
     Timer(
       Duration(seconds: 3),
       () => Navigator.pushReplacement(
@@ -26,7 +27,12 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Image.asset("assets/image/guide.png",height: MediaQuery.sizeOf(context).height,width: MediaQuery.sizeOf(context).width,fit: BoxFit.cover,),
+      child: Image.asset(
+        "assets/image/logo.png",
+        height: MediaQuery.sizeOf(context).height,
+        width: MediaQuery.sizeOf(context).width,
+        fit: BoxFit.cover,
+      ),
     );
   }
 }

@@ -72,7 +72,7 @@ class _BusViewState extends State<BusView> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       image: DecorationImage(
-                        image: AssetImage("assets/image/bus.PNG"),
+                        image: NetworkImage("https://cdn.pixabay.com/photo/2018/03/07/16/07/coach-3206326_1280.png"),fit: BoxFit.cover
                       ),
                     ),
                   ),

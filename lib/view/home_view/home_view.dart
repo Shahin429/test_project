@@ -14,13 +14,16 @@ class HomeView extends StatelessWidget {
     Size size = MediaQuery.sizeOf(context);
     return Scaffold(
       body: Column(
-        spacing: 60,
+        spacing: 50,
         children: [
           Stack(
             children: [
-              Image.asset(
-                "assets/image/travel_guide.jpg",
+              Container(
+                height: 230,
                 width: MediaQuery.sizeOf(context).width,
+                decoration: BoxDecoration(
+                  image: DecorationImage(image: NetworkImage("https://plus.unsplash.com/premium_photo-1683306661472-d7bd9497c82a?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),fit: BoxFit.cover),
+                ),
               ),
               Positioned(
                 left: 20,
@@ -32,7 +35,7 @@ class HomeView extends StatelessWidget {
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 18,
-                        color: Colors.orangeAccent,
+                        color: Colors.orange,
                       ),
                     ),
                     Text(
@@ -60,8 +63,8 @@ class HomeView extends StatelessWidget {
                       icon: Icons.flight,
                       text: "Airplane",
                       color: Colors.blue,
-                      height: size.height*0.2,
-                      width: size.width*0.41,
+                      height: size.height * 0.2,
+                      width: size.width * 0.41,
                       onTap: () {
                         Navigator.push(
                           context,
@@ -73,8 +76,8 @@ class HomeView extends StatelessWidget {
                       icon: Icons.train_outlined,
                       text: "Train",
                       color: Colors.blueAccent.shade700,
-                      height: size.height*0.2,
-                      width: size.width*0.41,
+                      height: size.height * 0.2,
+                      width: size.width * 0.41,
                       onTap: () {
                         Navigator.push(
                           context,
@@ -91,8 +94,8 @@ class HomeView extends StatelessWidget {
                       icon: Icons.directions_bus_outlined,
                       text: "Bus",
                       color: Colors.orange,
-                      height: size.height*0.2,
-                      width: size.width*0.41,
+                      height: size.height * 0.2,
+                      width: size.width * 0.41,
                       onTap: () {
                         Navigator.push(
                           context,
@@ -104,8 +107,8 @@ class HomeView extends StatelessWidget {
                       icon: Icons.directions_car_outlined,
                       text: "Car",
                       color: Colors.greenAccent.shade700,
-                      height: size.height*0.2,
-                      width: size.width*0.41,
+                      height: size.height * 0.2,
+                      width: size.width * 0.41,
                       onTap: () {
                         Navigator.push(
                           context,
