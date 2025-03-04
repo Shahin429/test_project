@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:test_project/view/airplane/air_plane.dart';
 import 'package:test_project/view/bus_view/bus_view.dart';
@@ -18,13 +19,22 @@ class HomeView extends StatelessWidget {
         children: [
           Stack(
             children: [
-              Container(
-                height: 230,
-                width: MediaQuery.sizeOf(context).width,
-                decoration: BoxDecoration(
-                  image: DecorationImage(image: NetworkImage("https://plus.unsplash.com/premium_photo-1683306661472-d7bd9497c82a?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),fit: BoxFit.cover),
-                ),
-              ),
+              CachedNetworkImage(
+                height: 220,
+                  width: MediaQuery.sizeOf(context).width,
+                  imageUrl: "https://plus.unsplash.com/premium_photo-1683306661472-d7bd9497c82a?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                  fit: BoxFit.cover),
+              // Container(
+              //   height: 230,
+              //   width: MediaQuery
+              //       .sizeOf(context)
+              //       .width,
+              //   decoration: BoxDecoration(
+              //     image: DecorationImage(image: NetworkImage(
+              //         "https://plus.unsplash.com/premium_photo-1683306661472-d7bd9497c82a?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"),
+              //         fit: BoxFit.cover),
+              //   ),
+              // ),
               Positioned(
                 left: 20,
                 bottom: 20,

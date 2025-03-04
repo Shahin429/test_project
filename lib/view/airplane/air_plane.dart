@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 import '../../res/components/app_string.dart';
@@ -70,13 +71,21 @@ class _AirPlaneState extends State<AirPlane> {
                   width: MediaQuery.sizeOf(context).width,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    image: DecorationImage(
-                      image: NetworkImage(
-                        "https://images.pexels.com/photos/46148/aircraft-jet-landing-cloud-46148.jpeg",
-                      ),
-                      fit: BoxFit.cover,
-                    ),
+                    // image: DecorationImage(
+                    //   image: NetworkImage(
+                    //     "https://images.pexels.com/photos/46148/aircraft-jet-landing-cloud-46148.jpeg",
+                    //   ),
+                    //   fit: BoxFit.cover,
+                    // ),
+
                   ),
+              child: Center(
+                child: CachedNetworkImage(
+
+                  imageUrl:
+                  'https://cdn.pixabay.com/photo/2018/03/07/16/07/coach-3206326_1280.png',fit: BoxFit.cover,
+                ),
+              ),
                 ),
             ModifyText(
               text: "Airplane",

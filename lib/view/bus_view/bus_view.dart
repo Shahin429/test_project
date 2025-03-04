@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 import '../../res/components/app_string.dart';
@@ -71,11 +72,19 @@ class _BusViewState extends State<BusView> {
                     height: 200,
                     width: MediaQuery.sizeOf(context).width,
                     decoration: BoxDecoration(
+                      color: Colors.grey[700],
                       borderRadius: BorderRadius.circular(20),
-                      image: DecorationImage(
-                        image: NetworkImage(
-                          "https://cdn.pixabay.com/photo/2018/03/07/16/07/coach-3206326_1280.png",
-                        ),
+                      // image: DecorationImage(
+                      //   image: NetworkImage(
+                      //     "https://cdn.pixabay.com/photo/2018/03/07/16/07/coach-3206326_1280.png",
+                      //   ),
+                      //   fit: BoxFit.cover,
+                      // ),
+                    ),
+                    child: Center(
+                      child: CachedNetworkImage(
+                        imageUrl:
+                            'https://cdn.pixabay.com/photo/2018/03/07/16/07/coach-3206326_1280.png',
                         fit: BoxFit.cover,
                       ),
                     ),
